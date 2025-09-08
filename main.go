@@ -29,10 +29,12 @@ func checkAge(age int) {
 func main() {
 	myName := "david"
 	myAge := 21
-	hobbies := []string{"Reading", "Hiking", "Coding"}
+	hobbies := []string{"Reading", "Hiking"}
 	displayGreeting(myName, myAge)
 	checkAge(myAge)
 	performCountdown(myAge)
+	hobbies = append(hobbies, "Coding", "Gaming")
+    fmt.Println("Updated hobbies:", hobbies)
 	for index, hobby := range hobbies {
     	fmt.Printf("Hobby #%d is %s\n", index, hobby)
 	}
